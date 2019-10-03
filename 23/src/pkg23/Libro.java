@@ -5,7 +5,7 @@ public class Libro {
     //atributos
     private String Titulo;
     private String Autor;
-    private int Número ;
+    private int Número;
 
     /**
      * costructor vacio
@@ -13,18 +13,14 @@ public class Libro {
     public Libro() {
     }
 
+    /**
+     * Constructor con parametros
+     */
+
     public Libro(String Ti, String Au, int Num) {
         this.Titulo = Ti;
         this.Autor = Au;
         this.Número = Num;
     }
-    /**
-     * Constructor con parametros
-     */
-    
-    
-    
-    
-    
-  
+
 }
