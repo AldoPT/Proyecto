@@ -13,25 +13,30 @@ public class Libro {
      * Parametro vacio
      */
     public Libro() {
+
     }
 
     /*
     * Parametro 
      */
-    public Libro(String Titulo, String Autor, int Numero, int Numeroexistencia, int Numeroprestados) {
+    public Libro(String Titulo, String Autor, int Numero, int Numexistencia, int Numprestados) {
         this.Titulo = Titulo;
         this.Autor = Autor;
         this.Numero = Numero;
-        this.Numeroexistencia = Numeroexistencia;
-        this.Numeroprestados = Numeroprestados;
+        this.Numeroexistencia = Numexistencia;
+        this.Numeroprestados = Numprestados;
     }
 
+    
     /**
      * Creamos Set y Get
-     * @return 
+     *
+     * @return
      */
     public String getTitulo() {
+
         return Titulo;
+
     }
 
     public void setTitulo(String Titulo) {
@@ -70,11 +75,16 @@ public class Libro {
         this.Numeroprestados = Numeroprestados;
     }
 
-    
-    public int Prestamo(){
-        int M=0;
-      
-        return 0;
-        
+    public boolean Prestamo(int Numprestados, int Numexistencia) {
+        boolean prestado = true;
+
+        if (Numprestados < Numexistencia) {
+            Numprestados++;
+        } else {
+            prestado = false;
+        }
+        return prestado;
     }
+    
+    
 }
