@@ -27,7 +27,6 @@ public class Libro {
         this.Numeroprestados = Numprestados;
     }
 
-    
     /**
      * Creamos Set y Get
      *
@@ -75,16 +74,32 @@ public class Libro {
         this.Numeroprestados = Numeroprestados;
     }
 
-    public boolean Prestamo(int Numprestados, int Numexistencia) {
-        boolean prestado = true;
-
-        if (Numprestados < Numexistencia) {
-            Numprestados++;
+    public boolean Prestamo() {
+        if (this.Numeroexistencia > 0) {
+            this.Numeroprestados++;
+            this.Numeroexistencia--;
+            return true;
         } else {
-            prestado = false;
+            return false;
         }
-        return prestado;
     }
-    
-    
+
+    public boolean Devolucion() {
+
+        if (this.Numeroprestados == 0) {
+
+            return false;
+        } else {
+            this.Numeroprestados--;
+            return true;
+        }
+
+    }
+
+    // Creamos to string
+    @Override
+    public String toString() {
+        return "Titulo =" + Titulo + ", Autor=" + Autor + ", Numero=" + Numero + ", Numeroexistencia=" + Numeroexistencia + ", Numeroprestados=" + Numeroprestados;
+    }
+
 }
