@@ -7,14 +7,24 @@ public class Libro {
     private String Autor;
     private int Número ;
 
-    public Libro() {
-    }
-    
-    
-    
     /**
      * costructor vacio
      */
+    public Libro() {
+    }
+
+    public Libro(String Ti, String Au, int Num) {
+        this.Titulo = Ti;
+        this.Autor = Au;
+        this.Número = Num;
+    }
+    /**
+     * Constructor con parametros
+     */
     
     
+    
+    
+    
+  
 }
