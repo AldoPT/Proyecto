@@ -44,6 +44,7 @@ public class Actividad extends javax.swing.JFrame {
         chkP3r3 = new javax.swing.JCheckBox();
         btnRegresar = new javax.swing.JButton();
         lblImagen3 = new javax.swing.JLabel();
+        lblRes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Actividad");
@@ -57,6 +58,11 @@ public class Actividad extends javax.swing.JFrame {
         });
 
         rbP1r2.setText("H2O");
+        rbP1r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbP1r2ActionPerformed(evt);
+            }
+        });
 
         rbP1r3.setText("CO2");
 
@@ -72,7 +78,7 @@ public class Actividad extends javax.swing.JFrame {
         txtPregunta2.setColumns(20);
         txtPregunta2.setLineWrap(true);
         txtPregunta2.setRows(2);
-        txtPregunta2.setText("En esta reaccion el NADH se oxida y el acido priruvico se reduce transformandose en");
+        txtPregunta2.setText("En esta reaccion el NADH se oxida y el acido priruvico se reduce transformandose en ");
         txtPregunta2.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtPregunta2);
 
@@ -123,71 +129,72 @@ public class Actividad extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(chkP3r1)
+                        .addGap(35, 35, 35)
+                        .addComponent(chkP3r2)
+                        .addGap(18, 18, 18)
+                        .addComponent(chkP3r3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(rbP2r1)
-                                .addGap(18, 18, 18)
-                                .addComponent(rbP2r2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rbP2r3))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rbP2r1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rbP2r2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(rbP2r3))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(55, 55, 55))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(rbP1r1)
-                                .addGap(70, 70, 70)
+                                .addGap(34, 34, 34)
                                 .addComponent(rbP1r2)
-                                .addGap(50, 50, 50)
-                                .addComponent(rbP1r3))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblImagen3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(chkP3r1)
                                 .addGap(35, 35, 35)
-                                .addComponent(chkP3r2)
-                                .addGap(18, 18, 18)
-                                .addComponent(chkP3r3))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegresar)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                                .addComponent(rbP1r3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblRes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addComponent(lblImagen3)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(lblImagen3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbP1r1)
                             .addComponent(rbP1r2)
-                            .addComponent(rbP1r3))
+                            .addComponent(rbP1r3)
+                            .addComponent(lblRes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbP2r1)
                             .addComponent(rbP2r2)
-                            .addComponent(rbP2r3))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                            .addComponent(rbP2r3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chkP3r1)
                             .addComponent(chkP3r2)
                             .addComponent(chkP3r3)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblImagen3)
+                        .addGap(18, 18, 18)
                         .addComponent(btnRegresar)
-                        .addGap(11, 11, 11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(16, 16, 16)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         pack();
@@ -198,7 +205,9 @@ public class Actividad extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     private void rbP1r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbP1r1ActionPerformed
-         // TODO add your handling code here:
+     rbP2r2.setSelected(false);
+     rbP2r3.setSelected(false);
+     lblRes.setText("Correcto");
     }//GEN-LAST:event_rbP1r1ActionPerformed
 
     private void rbP2r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbP2r1ActionPerformed
@@ -208,6 +217,10 @@ public class Actividad extends javax.swing.JFrame {
     private void chkP3r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkP3r2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_chkP3r2ActionPerformed
+
+    private void rbP1r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbP1r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbP1r2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +266,7 @@ public class Actividad extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblImagen3;
+    private javax.swing.JLabel lblRes;
     private javax.swing.JRadioButton rbP1r1;
     private javax.swing.JRadioButton rbP1r2;
     private javax.swing.JRadioButton rbP1r3;
