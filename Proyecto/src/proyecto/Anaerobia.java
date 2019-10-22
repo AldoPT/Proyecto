@@ -28,39 +28,47 @@ public class Anaerobia extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtAnaerobia = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblAnaerobia = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
+        txtAnaerobia2 = new javax.swing.JTextArea();
+        lblImagen3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setEnabled(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Respiracion Anaerobia");
         setResizable(false);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("El aceptor final de electrones es una molécula inorgánica distinta \ndel oxígeno, más raramente una\nmolécula orgánica. Es un tipo de metabolismo muy común en muchos microorganismos, especialmente \nprocariotas. No debe confundirse \ncon la fermentación, proceso \ntambién anaeróbico, pero en el queno interviene nada parecido a unacadena transportadora de \nelectrones. ");
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtAnaerobia.setEditable(false);
+        txtAnaerobia.setColumns(20);
+        txtAnaerobia.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtAnaerobia.setLineWrap(true);
+        txtAnaerobia.setRows(5);
+        txtAnaerobia.setText("Anaeróbica: Debido a que la glucólisis no utiliza oxígeno, el proceso se considera anaeróbico y para ciertos organismos anaerobios, como algunas bacterias y levaduras, la glucólisis es la única fuente de energía.\n\nCómo las células extraen energía de la glucosa en ausencia de oxígeno. En levaduras, las reacciones anaeróbicas producen alcohol, mientras que en tus músculos, forman ácido láctico.  ");
+        txtAnaerobia.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtAnaerobia);
 
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Anaerobia");
+        lblAnaerobia.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        lblAnaerobia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAnaerobia.setText("Anaerobia");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("Cómo las células extraen energía de la glucosa en ausencia de oxígeno. En levaduras, las reacciones anaeróbicas producen alcohol, mientras que en tus músculos, forman ácido láctico. ");
-        jTextArea2.setWrapStyleWord(true);
-        jScrollPane2.setViewportView(jTextArea2);
+        txtAnaerobia2.setColumns(20);
+        txtAnaerobia2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtAnaerobia2.setLineWrap(true);
+        txtAnaerobia2.setRows(5);
+        txtAnaerobia2.setText("Hay dos tipos comunes de respiración celular anaeróbica: fermentación láctica y fermentación alcohólica .\n\nFermentación alcohólica \n\nEl ácido pirúvico formado en la glucólisis se convierte anaeróbicamente en etanol. En el primer caso se libera dióxido de carbono, y en el segundo se oxida el NADH y se reduce a acetaldehído.\n\nOtras células, como por ejemplo los glóbulos rojos, las células musculares y algunos microorganismos transforman el ácido Pirúvico en ácido láctico.\n\nEn el caso de las células musculares, la fermentación láctica, se produce como resultado de ejercicios extenuantes durante los cuales el aporte de oxígeno no alcanza a cubrir las necesidades del metabolismo celular. La acumulación del ácido láctico en estas células produce la sensación de cansancio muscular que muchas veces acompaña a esos ejercicios.\n\nFermentación láctica\n\nEn esta reacción el NADH se oxida y el ácido pirúvico se reduce transformándose en ácido lactico.\n\nLa fermentación sea esta alcohólica o\nláctica ocurre en el citoplasma.\n\n");
+        txtAnaerobia2.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(txtAnaerobia2);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen4.PNG"))); // NOI18N
+        lblImagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen4.PNG"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,35 +81,42 @@ public class Anaerobia extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jButton1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(83, 83, 83)
+                                .addComponent(jButton1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblImagen3))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1))
+                .addComponent(lblAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblImagen3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)))
                 .addGap(31, 31, 31))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,11 +155,11 @@ public class Anaerobia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JLabel lblAnaerobia;
+    private javax.swing.JLabel lblImagen3;
+    private javax.swing.JTextArea txtAnaerobia;
+    private javax.swing.JTextArea txtAnaerobia2;
     // End of variables declaration//GEN-END:variables
 }

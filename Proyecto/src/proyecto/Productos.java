@@ -18,7 +18,7 @@ public class Productos extends javax.swing.JFrame {
      */
     public Productos() {
         initComponents();
-        
+
         this.getContentPane().setBackground(Color.DARK_GRAY);
     }
 
@@ -37,9 +37,13 @@ public class Productos extends javax.swing.JFrame {
         btnAerobia = new javax.swing.JButton();
         btnAnaerobia = new javax.swing.JButton();
         btnAtp = new javax.swing.JButton();
+        btnRegreso = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setEnabled(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Procesos para los productos ");
+        setAlwaysOnTop(true);
+        setFocusTraversalPolicyProvider(true);
+        setFocusable(false);
         setResizable(false);
 
         jTextArea1.setEditable(false);
@@ -47,41 +51,66 @@ public class Productos extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("· Glucolisis: Ocurre en el citoplasma, se rompen los enlaces químicos de la glucosa y libera energía, la glucosa formada por 6 átomos se rompe por la mitad y se forman dos compuestos de 3 carbonos cada uno: Acido Pirúbico.\n\n· Ciclo de Krebs: Durante este proceso un compuesto formado por dos carbonos, el acetilo, se degrada completamente uniéndose a un compuesto de 4 átomos de carbono formando así otro compuesto de 6. Luego este pierde un carbono y se forma uno de 5. Después de esto se pierde otro carbono y se degrada completamente formando dos moléculas de dióxido de carbono. En este proceso hay liberación de energía.\n\n· La cadena respiratoria: Como resultado de la glucólisis y el ciclo de Krebs la glucosa se divide y forma moléculas de CO2 liberando energía para la formación de ATP y átomos de hidrógeno. Los átomos de hidrógeno provenientes de las etapas anteriores se combinan con el oxígeno para formar agua. Además de gran cantidad de energía que sirve para formar 36 moléculas de ATP. ");
+        jTextArea1.setText("Tipos de respiración celular\n\n· Respiración aeróbica ocurre en las mitocondrias. El aceptor final de electrones es el oxígeno molecular, que se reduce a agua. La realizan la inmensa mayoría de organismos, incluidos los humanos. Los organismos que llevan a cabo este tipo de respiración reciben el nombre de organismos aeróbicos.\n\n· Respiración anaeróbica (fermentación) y ocurre en el citoplasma.  El aceptor final de electrones es una molécula inorgánica distinta del oxígeno, más raramente una molécula orgánica. Es un tipo de metabolismo muy común en muchos microorganismos, especialmente procariotas. No debe confundirse con la fermentación, proceso también anaeróbico, pero en el que no interviene nada parecido a una cadena transportadora de electrones. \n\n");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
         lblProcesos.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblProcesos.setForeground(new java.awt.Color(255, 255, 255));
         lblProcesos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblProcesos.setText("PROCESO PARA LOS PRODUCTOS");
 
         btnAerobia.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAerobia.setText("Aerobia");
+        btnAerobia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAerobiaActionPerformed(evt);
+            }
+        });
 
         btnAnaerobia.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAnaerobia.setText("Anaerobia");
+        btnAnaerobia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnaerobiaActionPerformed(evt);
+            }
+        });
 
         btnAtp.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAtp.setText("ATP");
+        btnAtp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtpActionPerformed(evt);
+            }
+        });
+
+        btnRegreso.setText("Regreso");
+        btnRegreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegreso)
+                        .addGap(9, 9, 9))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
@@ -89,19 +118,43 @@ public class Productos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAerobia, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(btnAnaerobia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAtp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(btnRegreso))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAerobiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAerobiaActionPerformed
+        Aerobia aer = new Aerobia();
+        aer.setVisible(true);       // TODO add your handling code here:
+    }//GEN-LAST:event_btnAerobiaActionPerformed
+
+    private void btnAnaerobiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnaerobiaActionPerformed
+      Anaerobia ana = new Anaerobia();
+        ana.setVisible(true);    // TODO add your handling code here:
+    }//GEN-LAST:event_btnAnaerobiaActionPerformed
+
+    private void btnAtpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtpActionPerformed
+        ATP at = new ATP();
+        at.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_btnAtpActionPerformed
+
+    private void btnRegresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresoActionPerformed
+ dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegresoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,6 +195,7 @@ public class Productos extends javax.swing.JFrame {
     private javax.swing.JButton btnAerobia;
     private javax.swing.JButton btnAnaerobia;
     private javax.swing.JButton btnAtp;
+    private javax.swing.JButton btnRegreso;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblProcesos;

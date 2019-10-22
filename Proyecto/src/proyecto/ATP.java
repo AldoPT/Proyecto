@@ -27,60 +27,93 @@ public class ATP extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblAtp = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        txtAtp = new javax.swing.JTextArea();
+        btnRegresar = new javax.swing.JButton();
+        lblImagen6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtObtiene = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("ATP");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ATP");
+        lblAtp.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        lblAtp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAtp.setText("ATP");
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("El trifosfato de adenosina (adenosín trifosfato, ATP o TFA) es un nucleótido fundamental en la obtención de energía celular. Está formado por una base nitrogenada (adenina) unida al carbono 1 de un azúcar de tipo pentosa, la ribosa, que en su carbono 5 tiene enlazados tres grupos fosfato. Es la principal fuente de energía para la mayoría de las funciones celulares.\n\nSe produce durante la fotorrespiración y la respiración celular, y es consumido por muchas enzimas en la catálisis de numerosos procesos químicos. Su fórmula molecular es C10H16N5O13P3");
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtAtp.setEditable(false);
+        txtAtp.setColumns(20);
+        txtAtp.setLineWrap(true);
+        txtAtp.setRows(5);
+        txtAtp.setText("El trifosfato de adenosina (adenosín trifosfato, ATP o TFA) es un nucleótido fundamental en la obtención de energía celular. Está formado por una base nitrogenada (adenina) unida al carbono 1 de un azúcar de tipo pentosa, la ribosa, que en su carbono 5 tiene enlazados tres grupos fosfato. Es la principal fuente de energía para la mayoría de las funciones celulares.\n\nSe produce durante la fotorrespiración y la respiración celular, y es consumido por muchas enzimas en la catálisis de numerosos procesos químicos. Su fórmula molecular es C10H16N5O13P3");
+        txtAtp.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtAtp);
 
-        jButton1.setText("Regresar");
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
+        lblImagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen6.jpg"))); // NOI18N
+
+        txtObtiene.setColumns(20);
+        txtObtiene.setLineWrap(true);
+        txtObtiene.setRows(5);
+        txtObtiene.setText("Forma en la que se obtiene ATP:\n\n· Glucolisis: Ocurre en el citoplasma, se rompen los enlaces químicos de la glucosa y libera energía, la glucosa formada por 6 átomos se rompe por la mitad y se forman dos compuestos de 3 carbonos cada uno: Acido Pirúvico.\n\n· Ciclo de Krebs: Durante este proceso un compuesto formado por dos carbonos, el acetilo, se degrada completamente uniéndose a un compuesto de 4 átomos de carbono formando así otro compuesto de 6. Luego este pierde un carbono y se forma uno de 5. Después de esto se pierde otro carbono y se degrada completamente formando dos moléculas de dióxido de carbono. En este proceso hay liberación de energía.\n\n· La cadena respiratoria: Como resultado de la glucólisis y el ciclo de Krebs la glucosa se divide y forma moléculas de CO2 liberando energía para la formación de ATP y átomos de hidrógeno. Los átomos de hidrógeno provenientes de las etapas anteriores se combinan con el oxígeno para formar agua. Además de gran cantidad de energía que sirve para formar 36 moléculas de ATP. ");
+        txtObtiene.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(txtObtiene);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(lblAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblImagen6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(12, 12, 12)
+                .addComponent(lblAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblImagen6, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 19, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+     dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,9 +151,12 @@ public class ATP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblAtp;
+    private javax.swing.JLabel lblImagen6;
+    private javax.swing.JTextArea txtAtp;
+    private javax.swing.JTextArea txtObtiene;
     // End of variables declaration//GEN-END:variables
 }
