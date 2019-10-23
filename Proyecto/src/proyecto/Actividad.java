@@ -5,8 +5,6 @@
  */
 package proyecto;
 
-import java.awt.Color;
-
 /**
  *
  * @author 18PROGB0026
@@ -18,7 +16,6 @@ public class Actividad extends javax.swing.JFrame {
      */
     public Actividad() {
         initComponents();
-         this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
     }
 
@@ -174,7 +171,7 @@ public class Actividad extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(chkP3r1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
                         .addComponent(chkP3r2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(chkP3r3))
@@ -191,7 +188,7 @@ public class Actividad extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(btnRegresar))
                     .addComponent(lblImagen3))
-                .addContainerGap())
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

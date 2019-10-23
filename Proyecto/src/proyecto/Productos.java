@@ -19,7 +19,7 @@ public class Productos extends javax.swing.JFrame {
     public Productos() {
         initComponents();
 
-         this.getContentPane().setBackground(Color.orange);
+        this.getContentPane().setBackground(Color.DARK_GRAY);
         this.setLocationRelativeTo(null);
     }
 
@@ -56,10 +56,10 @@ public class Productos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         lblProcesos.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblProcesos.setForeground(new java.awt.Color(255, 255, 255));
         lblProcesos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblProcesos.setText("PROCESO PARA LOS PRODUCTOS");
 
-        btnAerobia.setBackground(new java.awt.Color(0, 255, 204));
         btnAerobia.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAerobia.setText("Aerobia");
         btnAerobia.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +68,6 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
-        btnAnaerobia.setBackground(new java.awt.Color(0, 255, 204));
         btnAnaerobia.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAnaerobia.setText("Anaerobia");
         btnAnaerobia.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +76,6 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
-        btnAtp.setBackground(new java.awt.Color(0, 255, 204));
         btnAtp.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnAtp.setText("ATP");
         btnAtp.addActionListener(new java.awt.event.ActionListener() {
@@ -101,14 +99,15 @@ public class Productos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addGap(10, 10, 10)
                         .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegreso))
+                        .addComponent(btnRegreso)
+                        .addGap(9, 9, 9))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE))
@@ -118,17 +117,21 @@ public class Productos extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblProcesos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(lblProcesos, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegreso))
-                .addGap(21, 21, 21))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(btnRegreso))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAtp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAnaerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAerobia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
 
         pack();

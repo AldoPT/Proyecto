@@ -5,8 +5,6 @@
  */
 package proyecto;
 
-import java.awt.Color;
-
 /**
  *
  * @author 18PROGB0026
@@ -18,7 +16,6 @@ public class Autores extends javax.swing.JFrame {
      */
     public Autores() {
         initComponents();
-         this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
     }
 
