@@ -13,7 +13,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
-        this.getContentPane().setBackground(Color.DARK_GRAY);
+         this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
         
         
@@ -123,7 +123,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDefinicionActionPerformed
 
     private void mnManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnManualActionPerformed
-              
+                    
         // TODO add your handling code here:
     }//GEN-LAST:event_mnManualActionPerformed
 
