@@ -19,7 +19,7 @@ public class Productos extends javax.swing.JFrame {
     public Productos() {
         initComponents();
 
-        this.getContentPane().setBackground(Color.DARK_GRAY);
+        this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
     }
 

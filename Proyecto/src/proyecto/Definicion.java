@@ -18,7 +18,7 @@ public class Definicion extends javax.swing.JFrame {
      */
     public Definicion() {
         initComponents();
-     this.getContentPane().setBackground(Color.CYAN);
+     this.getContentPane().setBackground(Color.orange);
      this.setLocationRelativeTo(null);
     }
 
@@ -46,7 +46,7 @@ public class Definicion extends javax.swing.JFrame {
         txtConcepto.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtConcepto.setLineWrap(true);
         txtConcepto.setRows(5);
-        txtConcepto.setText("\nLa respiración celular es el conjunto de reacciones \nbioquímica por las cuales determinados compuestos orgánicos son degradados completamente, por \noxidación, hasta convertirse en sustancias inorgánicasproceso que proporciona energía aprovechable,\nla célula de esto provienen algunos de los productos y uno de los principales productos es el ATP.");
+        txtConcepto.setText("\nLa respiración celular es el conjunto de reacciones bioquímica por las cuales determinados compuestos orgánicos son degradados completamente, por oxidación, hasta convertirse en sustancias inorgánicasproceso que proporciona energía aprovechable,\nla célula de esto provienen algunos de los productos y uno de los principales productos es el ATP.");
         txtConcepto.setWrapStyleWord(true);
         txtConcepto.setAutoscrolls(false);
         jScrollPane1.setViewportView(txtConcepto);

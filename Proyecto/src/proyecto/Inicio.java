@@ -13,7 +13,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
-        this.getContentPane().setBackground(Color.DARK_GRAY);
+        this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
         
         
@@ -35,6 +35,7 @@ public class Inicio extends javax.swing.JFrame {
         lblImagen1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnManual = new javax.swing.JMenu();
+        jmiManual = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -72,12 +73,21 @@ public class Inicio extends javax.swing.JFrame {
         lblImagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen10.jpg"))); // NOI18N
         lblImagen1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        mnManual.setText("Manual");
+        mnManual.setText("Ayuda");
         mnManual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnManualActionPerformed(evt);
             }
         });
+
+        jmiManual.setText("Manual de Uso");
+        jmiManual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiManualActionPerformed(evt);
+            }
+        });
+        mnManual.add(jmiManual);
+
         jMenuBar1.add(mnManual);
         jMenuBar1.add(jMenu2);
 
@@ -138,6 +148,11 @@ public class Inicio extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_btnAutoresActionPerformed
 
+    private void jmiManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiManualActionPerformed
+        Procesos manual = new Procesos();
+        manual.cargarArchivo();
+    }//GEN-LAST:event_jmiManualActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -166,10 +181,8 @@ public class Inicio extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Inicio().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Inicio().setVisible(true);
         });
     }
 
@@ -180,6 +193,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jmiManual;
     private javax.swing.JLabel lblImagen1;
     private javax.swing.JMenu mnManual;
     // End of variables declaration//GEN-END:variables

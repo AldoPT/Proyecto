@@ -14,11 +14,21 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="mnManual">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Manual"/>
+            <Property name="text" type="java.lang.String" value="Ayuda"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnManualActionPerformed"/>
           </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiManual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Manual de Uso"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiManualActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
         </Menu>

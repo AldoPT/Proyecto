@@ -5,6 +5,8 @@
  */
 package proyecto;
 
+import java.awt.Color;
+
 /**
  *
  * @author 18PROGB0026
@@ -16,6 +18,7 @@ public class Anaerobia extends javax.swing.JFrame {
      */
     public Anaerobia() {
         initComponents();
+        this.getContentPane().setBackground(Color.orange);
         this.setLocationRelativeTo(null);
     }
 
