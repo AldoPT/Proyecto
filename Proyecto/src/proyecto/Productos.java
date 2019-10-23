@@ -20,6 +20,7 @@ public class Productos extends javax.swing.JFrame {
         initComponents();
 
         this.getContentPane().setBackground(Color.DARK_GRAY);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -41,7 +42,6 @@ public class Productos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Procesos para los productos ");
-        setAlwaysOnTop(true);
         setFocusTraversalPolicyProvider(true);
         setFocusable(false);
         setResizable(false);

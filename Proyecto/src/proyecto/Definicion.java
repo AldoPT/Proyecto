@@ -19,6 +19,7 @@ public class Definicion extends javax.swing.JFrame {
     public Definicion() {
         initComponents();
      this.getContentPane().setBackground(Color.CYAN);
+     this.setLocationRelativeTo(null);
     }
 
     /**
@@ -86,7 +87,7 @@ public class Definicion extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()

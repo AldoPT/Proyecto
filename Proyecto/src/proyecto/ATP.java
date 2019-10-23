@@ -16,6 +16,7 @@ public class ATP extends javax.swing.JFrame {
      */
     public ATP() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -16,6 +16,7 @@ public class Autores extends javax.swing.JFrame {
      */
     public Autores() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

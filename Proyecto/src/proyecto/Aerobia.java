@@ -16,6 +16,7 @@ public class Aerobia extends javax.swing.JFrame {
      */
     public Aerobia() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
